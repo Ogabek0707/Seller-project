@@ -9,6 +9,7 @@
   "dependencies": {
     "@hennge/vue3-pagination": "^1.0.17",
     "@vee-validate/rules": "^4.11.6",
+    "@vue/cli": "^5.0.8",
     "axios": "^1.6.0",
     "chart.js": "^3.7.0",
     "core-js": "^3.8.3",
