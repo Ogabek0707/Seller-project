@@ -1,10 +1,10 @@
 import axios from "axios";
 
 
-const http = axios.create({
+const https = axios.create({
     baseURL: process.env.VUE_APP_BASE_URL
 })
-http.interceptors.request.use(
+https.interceptors.request.use(
     (config) => {
         let token = localStorage.getItem("token")
         if (token) {
@@ -17,4 +17,4 @@ http.interceptors.request.use(
     (error) => Promise.reject(error)
 )
 
-export default http
+export default https
