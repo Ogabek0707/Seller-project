@@ -48,7 +48,7 @@ import { ref } from "vue"
 import { useRouter } from "vue-router"
 import AppModal from '@/ui/app-modal.vue'
 import Notification from '@/plagens/Notification'
-import http from "@/plagens/Axios"
+import https from "@/plagens/Axios"
 import eye from '@/assets/images/eye.svg'
 import hide from '@/assets/images/hide.svg'
 
@@ -67,7 +67,7 @@ const ChangePassword = () => {
       showPassword.value = !showPassword.value
 }; 
 const Login = () => {
-      http.post("user/token/",{
+      https.post("user/token/",{
             username: form.value.username,
             password: form.value.password
       }).then(res => {
@@ -84,7 +84,7 @@ const Login = () => {
       })
 };
 const Login_With_Role = () => {
-      http.post("user/token/", {
+      https.post("user/token/", {
             username: form.value.username,
             password: form.value.password,
             current_role: role.value.selected_role
