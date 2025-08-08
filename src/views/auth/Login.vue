@@ -85,6 +85,9 @@ const Login = () => {
             }
             console.log(err);
       })
+      setTimeout(() => {
+                  Notification({text: "Network Error !!!"}, {type: "danger"})
+            }, 1500);
       // router.push({name: 'products'})
 };
 const Login_With_Role = () => {
