@@ -72,6 +72,9 @@ const Login = () => {
             password: form.value.password
       }).then(res => {
             console.log(res);
+            setTimeout(() => {
+                  Notification({text: "Network Error !!!"}, {type: "danger"})
+            }, 1500);
       }).catch(err => {
             if(err.response.data.roles){
                   Notification({text: "Select your role !!!"}, {type: "success"})
@@ -82,6 +85,7 @@ const Login = () => {
             }
             console.log(err);
       })
+      // router.push({name: 'products'})
 };
 const Login_With_Role = () => {
       https.post("user/token/", {
